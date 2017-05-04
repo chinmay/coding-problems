@@ -2,7 +2,7 @@ package com.problems.median;
 
 import org.junit.Test;
 
-import static junit.framework.Assert.assertNotNull;
+import static junit.framework.TestCase.assertEquals;
 
 /**
  * Created by chinmay on 5/4/2017.
@@ -10,14 +10,25 @@ import static junit.framework.Assert.assertNotNull;
 public class RunningMedianTest {
 
     @Test
-    public void testMedian() {
+    public void testOddNumbers() {
+        RunningMedian client = new RunningMedian();
+
+        client.add(2);
+        client.add(3);
+        client.add(5);
+
+        assertEquals(3.0, client.findMedian());
+    }
+
+    @Test
+    public void testEvenNumbers() {
         RunningMedian client = new RunningMedian();
 
         client.add(2);
         client.add(3);
         client.add(4);
+        client.add(5);
 
-        assertNotNull(client.findMedian());
-        //assertEquals(3 , client.findMedian());
+        assertEquals(3.5, client.findMedian());
     }
 }
