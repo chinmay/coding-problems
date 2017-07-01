@@ -24,6 +24,13 @@ public class PalindromeTest {
     }
 
     @Test
+    public void testSimpleCharacterString_2() {
+
+        assertEquals(false, Palindrome.isPalindrome("abcabcab"));
+        assertEquals(true, Palindrome.isPalindrome("abcddcba"));
+    }
+
+    @Test
     public void testFullSentenceWithSpecialCharacters() {
 
         assertEquals(true, Palindrome.isPalindrome("a man, a plan, a canal panama"));
